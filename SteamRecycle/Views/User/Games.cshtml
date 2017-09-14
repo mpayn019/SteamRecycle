@@ -1,0 +1,32 @@
+﻿@model SteamRecycle.Models.User
+@{
+    ViewBag.Title = "Games";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2> @Model.ProfileId </h2>
+
+@section scripts{
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/",
+            data: {
+                key: config.SteamApiKey,
+                steamid: Model.ProfileId,
+                format: "json"
+            },
+            success: function (result) {
+                document.write(result)
+            },
+            error: function () {
+                document.write("An error has occured")
+            }
+        });
+    });
+</script>
+    
+}
+
