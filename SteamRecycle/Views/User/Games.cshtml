@@ -8,22 +8,11 @@
 <h2> @Model.ProfileId </h2>
 
 @section scripts{
+
 <script>
     $(document).ready(function () {
-        $.ajax({
-            type: "GET",
-            url: "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/",
-            data: {
-                key: config.SteamApiKey,
-                steamid: Model.ProfileId,
-                format: "json"
-            },
-            success: function (result) {
-                document.write(result)
-            },
-            error: function () {
-                document.write("An error has occured")
-            }
+        $.get("http://localhost:3000/Steam/Gameslist/@Model.ProfileId", function(result) {
+            console.log(result)
         });
     });
 </script>

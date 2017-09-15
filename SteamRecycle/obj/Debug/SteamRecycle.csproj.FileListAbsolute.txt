@@ -69,3 +69,13 @@ C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\Microsoft.Owin.Se
 C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\System.Net.Http.Formatting.dll
 C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\System.Net.Http.Formatting.xml
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\Express.dll
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\Microsoft.Owin.Hosting.dll
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\Node.dll
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\System.Web.Http.dll
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\System.Web.Http.Owin.dll
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\Microsoft.Owin.Hosting.xml
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\System.Web.Http.xml
+C:\Users\Matt\Desktop\C#Projects\SteamRecycle\SteamRecycle\bin\System.Web.Http.Owin.xml
