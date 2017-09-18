@@ -7,15 +7,36 @@
 
 <h2> @Model.ProfileId </h2>
 
+<div id="grid"></div>
+
 @section scripts{
 
-<script>
-    $(document).ready(function () {
-        $.get("http://localhost:3000/Steam/Gameslist/@Model.ProfileId", function(result) {
-            console.log(result)
+    <script>
+        $(document).ready(function () {
+
+            $.get("http://localhost:3000/Steam/Gameslist/@Model.ProfileId", function (result) {
+                var jsonOutput = JSON.parse(JSON.stringify(result)).response;
+                var pageOutput = "";
+                for ( i in jsonOutput.games)
+                {
+                    var game = jsonOutput.games[i];
+                    var imageUrl = "http://media.steampowered.com/steamcommunity/public/images/apps/" + game.appid + "/" + game.img_logo_url + ".jpg";
+                    pageOutput += "<div class='grid-item'><img src='"+ imageUrl + "'/></div>";
+                }
+                //console.log(pageOutput);
+                document.getElementById("grid").innerHTML = pageOutput;
+            });
+
+            var $grid = $('.grid').imagesLoaded(function () {
+                $grid.masonry({
+                    itemSelector: '.grid-item',
+                    percentPosition: true,
+                    columnWidth: '.grid-sizer'
+                });
+
+            });
         });
-    });
-</script>
+    </script>
     
 }
 

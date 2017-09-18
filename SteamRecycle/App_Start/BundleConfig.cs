@@ -11,7 +11,9 @@ namespace SteamRecycle
             bundles.Add(new ScriptBundle("~/bundles/lib").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/bootstrap.js",
-                        "~/Scripts/respond.js"));
+                        "~/Scripts/respond.js",
+                        "~/Scripts/masonry.pkgd.js",
+                        "~/Scripts/imagesloaded.pkgd.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -26,7 +28,8 @@ namespace SteamRecycle
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-custom.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/grid.css"));
         }
     }
 }
