@@ -13,7 +13,8 @@ namespace SteamRecycle
                         "~/Scripts/bootstrap.js",
                         "~/Scripts/respond.js",
                         "~/Scripts/masonry.pkgd.js",
-                        "~/Scripts/imagesloaded.pkgd.js"));
+                        "~/Scripts/imagesloaded.pkgd.js",
+                        "~/Scripts/gameslist.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -29,7 +30,8 @@ namespace SteamRecycle
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-custom.css",
                       "~/Content/site.css",
-                      "~/Content/grid.css"));
+                      "~/Content/grid.css",
+                      "~/Content/hover-effect.css"));
         }
     }
 }

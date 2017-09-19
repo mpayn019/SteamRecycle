@@ -225,6 +225,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\grid.css" />
+    <Content Include="Content\hover-effect.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -243,9 +244,11 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Images\SteamLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\config.js" />
+    <Content Include="Scripts\gameslist.js" />
     <Content Include="Scripts\imagesloaded.pkgd.js" />
     <Content Include="Scripts\imagesloaded.pkgd.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />

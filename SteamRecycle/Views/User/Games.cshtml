@@ -21,17 +21,22 @@
                 {
                     var game = jsonOutput.games[i];
                     var imageUrl = "http://media.steampowered.com/steamcommunity/public/images/apps/" + game.appid + "/" + game.img_logo_url + ".jpg";
-                    pageOutput += "<div class='grid-item'><img src='"+ imageUrl + "'/></div>";
+                    pageOutput +=
+                    "<div class='grid-item grid_container'>" +
+                        "<div class='grid_media'>"+
+                            "<img src='" + imageUrl + "' onerror=\"this.src='/Images/SteamLogo.png'\" class='grid_image'/>"+
+                            "<h1>" + game.name + "</h1>"+
+                        "</div>"+
+                    "</div>";
                 }
-                //console.log(pageOutput);
                 document.getElementById("grid").innerHTML = pageOutput;
             });
 
             var $grid = $('.grid').imagesLoaded(function () {
                 $grid.masonry({
                     itemSelector: '.grid-item',
-                    percentPosition: true,
-                    columnWidth: '.grid-sizer'
+                    columnWidth: '.grid-sizer',
+                    percentPosition: true
                 });
 
             });
