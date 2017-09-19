@@ -14,7 +14,8 @@ namespace SteamRecycle
                         "~/Scripts/respond.js",
                         "~/Scripts/masonry.pkgd.js",
                         "~/Scripts/imagesloaded.pkgd.js",
-                        "~/Scripts/gameslist.js"));
+                        "~/Scripts/gameslist.js",
+                        "~/Scripts/grid.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));

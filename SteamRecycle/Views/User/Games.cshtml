@@ -12,35 +12,10 @@
 @section scripts{
 
     <script>
-        $(document).ready(function () {
+        var profileId = "@Model.ProfileId";
 
-            $.get("http://localhost:3000/Steam/Gameslist/@Model.ProfileId", function (result) {
-                var jsonOutput = JSON.parse(JSON.stringify(result)).response;
-                var pageOutput = "";
-                for ( i in jsonOutput.games)
-                {
-                    var game = jsonOutput.games[i];
-                    var imageUrl = "http://media.steampowered.com/steamcommunity/public/images/apps/" + game.appid + "/" + game.img_logo_url + ".jpg";
-                    pageOutput +=
-                    "<div class='grid-item grid_container'>" +
-                        "<div class='grid_media'>"+
-                            "<img src='" + imageUrl + "' onerror=\"this.src='/Images/SteamLogo.png'\" class='grid_image'/>"+
-                            "<h1>" + game.name + "</h1>"+
-                        "</div>"+
-                    "</div>";
-                }
-                document.getElementById("grid").innerHTML = pageOutput;
-            });
+        getGameList(profileId);
 
-            var $grid = $('.grid').imagesLoaded(function () {
-                $grid.masonry({
-                    itemSelector: '.grid-item',
-                    columnWidth: '.grid-sizer',
-                    percentPosition: true
-                });
-
-            });
-        });
     </script>
     
 }
