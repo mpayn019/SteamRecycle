@@ -1,6 +1,7 @@
 ﻿@model SteamRecycle.Models.User
 @{
     ViewBag.Title = "Home Page";
+    Html.EnableClientValidation(true);
 }
 
 &ensp;
@@ -10,12 +11,13 @@
 
         @using (Html.BeginForm("Games", "User"))
         {
-            <div class="input-group col-lg-4">
-                <input type="text" name="profileId" class="form-control" placeholder="Enter your SteamID here..." aria-label="Enter your SteamID here..." />
+            <div class="input-group col-lg-2">
+                @Html.TextBoxFor(m => m.ProfileId, new{ @class="form-control", placeholder = "Enter your SteamID64 here..."})
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </span>
             </div>
+            @Html.ValidationMessageFor(m => m.ProfileId, "", new { @class = "text-danger" })
         }
 
 
