@@ -14,7 +14,7 @@ app.get('/Steam/GamesList/:profileid', function (httpRequest, httpResponse) {
     var profileId = httpRequest.params.profileid;
 
     var url = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key="
-        + config.config()
+        + config.steamApiKey()
         + "&steamid=" + profileId
         + "&format=json&include_appinfo=1";
 

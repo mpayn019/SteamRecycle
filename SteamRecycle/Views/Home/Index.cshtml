@@ -7,26 +7,23 @@
 &ensp;
 
 <div class="jumbotron">
-    <h1>Steam Recycle</h1>
+    <h1>Find your unplayed games</h1>
 
-        @using (Html.BeginForm("Games", "User"))
-        {
-            <div class="input-group col-lg-2">
-                @Html.TextBoxFor(m => m.ProfileId, new{ @class="form-control", placeholder = "Enter your SteamID64 here..."})
-                <span class="input-group-btn">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </span>
-            </div>
-            @Html.ValidationMessageFor(m => m.ProfileId, "", new { @class = "text-danger" })
-        }
-
-
-            
+    @using (Html.BeginForm("Games", "User"))
+    {
+        <div class="input-group col-lg-2">
+            @Html.TextBoxFor(m => m.ProfileId, new { @class = "form-control", placeholder = "Enter your SteamID64 here..." })
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </span>
+        </div>
+        @Html.ValidationMessageFor(m => m.ProfileId, "", new { @class = "text-danger" })
+    }        
 </div>
 <div>
-    <h2>Don't know what any of these are?</h2>
+    <h2>Don't know your SteamID64?</h2>
     <p>
-        You can find your SteamID, SteamID3, SteamID64, Custom URL, and Profile URL through one of these services
+        You can find your SteamID64 through one of these services:
     </p>
     <p>
         <a class="btn btn-primary" href="https://steamid.io/">SteamID I/O</a>
