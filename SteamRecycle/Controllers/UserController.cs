@@ -13,6 +13,8 @@ namespace SteamRecycle.Controllers
         // GET: User/Games/5
         public ActionResult Games(string profileId)
         {
+            if (String.IsNullOrWhiteSpace(profileId))
+                return RedirectToAction("PageNotFound", "Error");
 
             var user = new User();
             user.ProfileId = profileId;

@@ -12,7 +12,7 @@
     @using (Html.BeginForm("Games", "User"))
     {
         <div class="input-group col-lg-2">
-            @Html.TextBoxFor(m => m.ProfileId, new { @class = "form-control", placeholder = "Enter your SteamID64 here..." })
+            @Html.TextBoxFor(m => m.ProfileId, new {@class = "form-control", placeholder = "Enter your SteamID64 here..." })
             <span class="input-group-btn">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </span>
@@ -26,9 +26,9 @@
         You can find your SteamID64 through one of these services:
     </p>
     <p>
-        <a class="btn btn-primary" href="https://steamid.io/">SteamID I/O</a>
-        <a class="btn btn-primary" href="https://steamidfinder.com/">Stean ID Finder</a>
-        <a class="btn btn-primary" href="http://www.steam64.com/">Steam64</a>
+        <a class="btn btn-primary" href="https://steamid.io/" target="_blank">SteamID I/O</a>
+        <a class="btn btn-primary" href="https://steamidfinder.com/" target="_blank">Stean ID Finder</a>
+        <a class="btn btn-primary" href="http://www.steam64.com/" target="_blank">Steam64</a>
     </p>
 </div>
 
